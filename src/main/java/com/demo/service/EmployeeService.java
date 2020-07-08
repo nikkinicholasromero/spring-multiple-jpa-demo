@@ -30,23 +30,4 @@ public class EmployeeService {
 
         return Stream.concat(employees1.stream(), employees2.stream()).collect(Collectors.toList());
     }
-
-    public Employee findById(Integer id) {
-        return employeeRepository1.findById(id).orElse(new Employee());
-    }
-
-    public void save(Employee employee) {
-        employeeRepository1.save(employee);
-    }
-
-    public void update(Employee employee) {
-        employeeRepository1.save(employee);
-    }
-
-    public void delete(int id) {
-        Employee employee = new Employee();
-        employee.setId(id);
-
-        employeeRepository1.delete(employee);
-    }
 }
